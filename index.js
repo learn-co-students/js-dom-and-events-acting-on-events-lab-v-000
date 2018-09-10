@@ -14,7 +14,7 @@ function addNewElementAsLi() {
 }
 
 function addNewLiOnClick() {
-  const main = document.querySelector('main');
+  const main = document.querySelector('input[type="submit"]');
   main.addEventListener('click', function(e) {
     addNewElementAsLi();
     document.querySelector('input').value = "";
@@ -26,8 +26,6 @@ function clearEmployeeListOnLinkClick() {
   clearListElement.addEventListener('click', function(e) {
     let list = document.querySelector('.employee-list');
     list.innerHTML="";
-    document.querySelector('main').removeChild(list);
-    e.stopPropagation();
   });
 }
 preventRefreshOnSubmit()
