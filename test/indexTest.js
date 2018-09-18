@@ -7,6 +7,7 @@ describe('index', () => {
       expect(retrieveEmployeeInformation()).to.equal('Bob')
     })
   })
+  
 
   describe('addNewElementAsLi()', () => {
     it('adds an li element with the text as the value of the input', () => {
