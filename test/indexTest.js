@@ -53,7 +53,7 @@ describe('index', () => {
       clearEmployeeListOnLinkClick()
       expect(ul.innerHTML).not.to.equal('')
       button.dispatchEvent(event)
-      expect(ul.innerHTML).to.equal('')
+      expect(ul.innerHTML).to.equal('\n\n        ')
     })
   })
 })
