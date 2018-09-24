@@ -21,8 +21,13 @@ function addNewLiOnClick() {
   inputValue.addEventListener('click', function(event) {
     addNewElementAsLi()
     input.value = ""
+    //  resetInput() instead of input.value = ''
   })
 }
+
+// function resetInput(){
+//   document.querySelector('input').value = ''
+// }
 
 function clearEmployeeListOnLinkClick(){
   let link = document.querySelector('a')
@@ -30,5 +35,4 @@ function clearEmployeeListOnLinkClick(){
   link.addEventListener('click', function(event){
     employeeList.innerHTML = ''
   })
-
 }
