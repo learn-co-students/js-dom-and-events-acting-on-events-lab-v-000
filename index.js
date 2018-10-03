@@ -13,7 +13,7 @@ function retrieveEmployeeInformation() {
 
 function addNewElementAsLi() {
   let inputText = retrieveEmployeeInformation();
-  document.querySelector('.employee-list').append(inputText)
+  document.querySelector('.employee-list').insertAdjacentHTML('beforeend', inputText)
 }
 
 function clearTheInputValue() {
