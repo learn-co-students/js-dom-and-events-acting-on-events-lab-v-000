@@ -6,7 +6,7 @@
     <title>Acting On Events Lab</title>
     <meta name="description" content="JavaScript DOM and Events Acting On Events in the Learn.co curriculum">
     <meta name="author" content="Flatiron School">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="node_modules/mocha/mocha.css">
   </head>
 
@@ -21,8 +21,9 @@
         <ul class="employee-list">
 
         </ul>
-        <a href="#">Clear Employee List</a>
+        <a class='clear-employee-list' href="#">Clear Employee List</a>
     </main>
+
     <!-- <div> for Mocha to display test results. -->
     <div id="mocha"></div>
 
@@ -38,6 +39,8 @@
 
     <script src="node_modules/sinon/pkg/sinon.js"></script>
 
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
     <!-- Include the student's JavaScript file. -->
     <script src="index.js"></script>
 
@@ -48,6 +51,5 @@
     <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
 
     <!-- Run the test suite automatically when the page loads. -->
-
   </body>
 </html>
