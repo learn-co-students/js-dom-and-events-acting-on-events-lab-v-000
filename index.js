@@ -31,12 +31,10 @@ function addNewLiOnClick() {
 }
 
 function clearEmployeeListOnLinkClick() {
-  let a = document.querySelector('main a');
-
-  function clearUl() {
-    let ul = document.querySelector('.employee-list');
+  let link = document.querySelector('main a');
+  let ul = document.querySelector('.employee-list');
+  
+  link.addEventListener("click", function(event){
     ul.innerHTML = "";
-  }
-
-  a.addEventListener("click", clearUl);
+  });
 }
