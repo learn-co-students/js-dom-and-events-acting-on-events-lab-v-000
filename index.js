@@ -13,7 +13,7 @@ function retrieveEmployeeInformation() {
 function addNewElementAsLi() {
   let li = document.createElement('li')                      //create new li element
   li.innerHTML = retrieveEmployeeInformation()              //set value of li to equal return value of function above
-  document.querySelector('.employee-list').appendChild(li)   //select the employee-class ul & append the new li element to it
+  document.querySelector('.employee-list').appendChild(li)   //select the employee-list class & append the new li element to it
 }
 
 function addNewLiOnClick() {
