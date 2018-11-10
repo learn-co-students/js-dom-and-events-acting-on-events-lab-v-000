@@ -25,7 +25,7 @@ function addNewLiOnClick() {
 }
 
 function clearEmployeeListOnLinkClick() {
-  let link = document.querySelector('a')                  //grab a tag element & set variable to it
+  let link = document.querySelector('a')                  //grab 'a' tag element & set variable to it
   let list = document.querySelector('ul')                 //grab ul element & set variable to it
   link.addEventListener('click', function(e) {            //add event listener to a tag variable & listen for click
   list.innerHTML = ''                                     //clear innerHTML of the ul variable
