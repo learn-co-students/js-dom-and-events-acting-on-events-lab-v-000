@@ -11,24 +11,24 @@ function retrieveEmployeeInformation() {
 }
 
 function addNewElementAsLi() {
-  let li = document.createElement('li')
-  li.innerHTML = retrieveEmployeeInformation();         //or-   document.querySelector('input').value
-  document.querySelector('.employee-list').appendChild(li);
+  let element = document.createElement('li')
+  element.innerHTML = retrieveEmployeeInformation()
+  let ul = document.querySelector('ul')
+  ul.appendChild(element)
 }
 
 function addNewLiOnClick() {
-  const main = document.querySelector('input[type="submit"]')
-  main.addEventListener('click', function(event) {
+  const input = document.querySelector("input[type='submit']")
+  input.addEventListener('click', function(event) {
     addNewElementAsLi()
-    document.querySelector('input').value = ''
+    document.querySelector('input').value = ""
   })
 }
 
-function clearEmployeeListOnLinkClick() {
-  const main = document.querySelector('a')
-  main.addEventListener('click', function(event) {
+  function clearEmployeeListOnLinkClick() {
+    let link = document.querySelector('a')
     let list = document.querySelector('.employee-list')
+    link.addEventListener('click', function(event) {
     list.innerHTML = ''
-  })
-
-}
+    })
+  }
