@@ -42,7 +42,7 @@ function addNewElementAsLi(){
 // });
 
 function clearEmployeeListOnLinkClick () {
-  let aNode = document.querySelector('main a');
+  let aNode = document.querySelector('a');
   aNode.addEventListener('click', function(event) {
     let ulNode = document.getElementsByClassName("employee-list");
     while (ulNode.firstChild) {
