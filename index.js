@@ -15,8 +15,6 @@ function retrieveEmployeeInformation(){
 function addNewElementAsLi() {
   let returnedEmp = retrieveEmployeeInformation()
   document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${returnedEmp}</li>`)
-  // JQuery lets you pass the variable here: "<li>${returnedEmp}</li>". And the lis repeat themselves
-  // for all the instances in retrieveEmployeeInformation!
 }
 
 function addNewElementAsLi(){
@@ -24,16 +22,13 @@ function addNewElementAsLi(){
   document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
 }
 
-  // couldn't piggyback off addNewElementAsLi
-  function addNewLiOnClick(){
-    let newEmp = document.querySelector('input[type="submit"]')
-    newEmp.addEventListener('click', function(event) {
-    addNewElementAsLi()
-    resetInput()
-    })
-  }
-
-// is event a builtin item? ??? is resentInput like that?
+function addNewLiOnClick(){
+  let newEmp = document.querySelector('input[type="submit"]')
+  newEmp.addEventListener('click', function(event) {
+  addNewElementAsLi()
+  resetInput()
+  })
+}
 
 function clearEmployeeListOnLinkClick () {
   let aNode = document.querySelector('a')
@@ -42,9 +37,6 @@ function clearEmployeeListOnLinkClick () {
     ulNode.innerHTML = ""
   })
 }
-
-// make sure to put set up code like the lets above where they go and the executable code like inside the
-// callback function where it goes
 
 function resetInput () {
   document.querySelector('input').value = ''
