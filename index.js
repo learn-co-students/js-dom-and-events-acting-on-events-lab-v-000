@@ -35,31 +35,17 @@ function addNewElementAsLi(){
 
 // is event a builtin item? ??? is resentInput like that?
 
-// const main = document.getElementById('main');
- 
-// main.addEventListener('click', function(event) {
-//   alert('I was clicked!');
-// });
-
 function clearEmployeeListOnLinkClick () {
-  let aNode = document.querySelector('a');
+  let aNode = document.querySelector('a')
+  let ulNode = document.querySelector('ul')
   aNode.addEventListener('click', function(event) {
-    let ulNode = document.getElementsByClassName("employee-list");
-    while (ulNode.firstChild) {
-      ulNode.removeChild(ulNode.firstChild);
-    }
+    ulNode.innerHTML = ""
   })
 }
+
+// make sure to put set up code like the lets above where they go and the executable code like inside the
+// callback function where it goes
 
 function resetInput () {
   document.querySelector('input').value = ''
 }
-
-
-
-// function addNewLiOnClick(){
-//   let submit = document.querySelector('input[type="submit"]')
-//   submit.addEventListener('click', function(event){
-//     addNewElementAsLi()
-//     resetInput()
-//   })
