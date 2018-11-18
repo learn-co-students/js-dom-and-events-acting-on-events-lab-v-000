@@ -17,11 +17,14 @@ function addNewElementAsLi() {
 }
 
 function addNewLiOnClick() {
-  let button = document.querySelector('input:last-child')
-  button.addEventListener('click', addNewElementAsLi())
+  let submitButton = document.querySelector('input:last-child')
+  submitButton.addEventListener('click', addNewElementAsLi())
   document.querySelector('input').value = ''
 }
 
 function clearEmployeeListOnLinkClick() {
-
+  let clearButton = document.querySelector('a')
+  clearButton.addEventListener('click', function(e) {
+    document.querySelector('ul').innerHTML = ''
+  })
 }
