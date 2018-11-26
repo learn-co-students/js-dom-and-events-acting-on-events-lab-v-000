@@ -27,7 +27,8 @@ function addNewLiOnClick() {
 }
 
  function clearEmployeeListOnLinkClick() {
-  var list =  document.querySelector(`.employee-list`);
-  return while (list.hasChildNodes()) {
-  return list.removeChild(list.firstChild);
-}}
+   let myNodeList = document.querySelectorAll('li');
+   for (var i = 0; i < myNodeList.length; i++) {
+        myNodeList[i] = '';
+  }
+}
