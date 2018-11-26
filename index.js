@@ -8,26 +8,35 @@ function preventRefreshOnSubmit(){
 preventRefreshOnSubmit()
 
 
+let input = document.querySelector('input');
 
 function retrieveEmployeeInformation () {
-	return document.querySelector('input').value;
+	return input.value;
 }
 
 function addNewElementAsLi() {
-	document.querySelector(".employee-list").append(retrieveEmployeeInformation());
+	let employeeName = retrieveEmployeeInformation()
+	document.querySelector(".employee-list").insertAdjacentHTML('beforeend', '<li>${employeeName}</li>');
 }
 
 function addNewLiOnClick() {
-	document.querySelector('input').addEventListener('click', addNewElementAsLi());
-	document.querySelector('input').value = "";
+	let submit = document.querySelector('input[type="submit]')
+	submit.addEventListener('click', function(event) {
+		addNewElementAsLi()
+		resetInput()
+	})
 }
 
 function clearEmployeeListOnLinkClick () {
-	document.querySelector("a").addEventListener('click', clearList);
+	let link = document.querySelector('a')
+	let ul = document.querySelector('ul')
+	link.addEventListener('click', function(event) {
+		ul.innerHTML = "";
+	})
 }
 
-function clearList() {
-	document.querySelector(".employee-list").innerHTML = "";
+function resetInput() {
+	document.querySelector(".input").innerHTML = "";
 }
 
 
