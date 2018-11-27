@@ -1,10 +1,16 @@
+// $(document).ready(function(){
+//
+//   clearEmployeeListOnLinkClick()
+// })
+
+
 function preventRefreshOnSubmit(){
     document.querySelector('form').addEventListener('submit', function(event){
       event.preventDefault()
     })
 }
 
-preventRefreshOnSubmit()
+  preventRefreshOnSubmit()
 
 function retrieveEmployeeInformation() {
  return document.querySelector('input').value;
@@ -27,8 +33,8 @@ function addNewLiOnClick() {
 }
 
  function clearEmployeeListOnLinkClick() {
-   let myNodeList = document.querySelectorAll('li');
-   for (var i = 0; i < myNodeList.length; i++) {
-        myNodeList[i] = '';
+   document.querySelector('a').addEventListener('click', function(event){
+    event.preventDefault();
+    document.querySelector('.employee-list').innerHTML = '';
+    })
   }
-}
