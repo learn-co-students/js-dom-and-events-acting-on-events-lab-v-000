@@ -8,15 +8,13 @@ preventRefreshOnSubmit()
 
 document.addEventListener('submit', retrieveEmployeeInformation);
 
-document.addEventListener('click', clearEmployeeListOnLinkClick);
-
 function retrieveEmployeeInformation() {
   return document.getElementsByName("name")[0].value;
 }
 
 function addNewElementAsLi() {
   let name = retrieveEmployeeInformation();
-  $('ul').append('<li>' + name + '</li>');
+  $('ul').append('<li>'+name+'</li>');
 }
 
 function addNewLiOnClick() {
@@ -28,5 +26,7 @@ function addNewLiOnClick() {
 }
 
 function clearEmployeeListOnLinkClick() {
-  $("ul").empty();
+  document.getElementsByTagName('a')[0].addEventListener('click', function() {
+    $('ul').empty();
+  });
 }
