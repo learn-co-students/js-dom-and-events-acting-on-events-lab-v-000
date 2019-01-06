@@ -19,18 +19,19 @@ function addNewElementAsLi() {
   document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
 }
 
-function addNewLiOnClick() {
+function addNewLiOnClick(){
   let submit = document.querySelector('input[type="submit"]')
-  submit.addEventListener(click', function(event) {
+  submit.addEventListener('click', function(event){
     addNewElementAsLi()
     resetInput()
   })
 }
 
-function clearEmployeeListOnLinkClick() {
+
+function clearEmployeeListOnLinkClick(){
   let link = document.querySelector('a')
   let ul = document.querySelector('ul')
-  link.addEventListener('click', function(event) {
+  link.addEventListener('click', function(event){
     ul.innerHTML = ''
   })
 }
