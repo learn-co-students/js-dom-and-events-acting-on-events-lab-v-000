@@ -3,7 +3,8 @@ function preventRefreshOnSubmit(){
       event.preventDefault()
     })
 }
-
+//https://dzone.com/articles/debug-javascript-using-chrome-developer-tools
+//https://developers.google.com/web/tools/chrome-devtools/javascript/
 preventRefreshOnSubmit()
 
 function retrieveEmployeeInformation() {
