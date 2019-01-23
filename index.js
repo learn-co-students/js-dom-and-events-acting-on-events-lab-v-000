@@ -5,3 +5,34 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+let input = document.querySelector('input')
+
+function retrieveEmployeeInformation(){
+  return input.value
+}
+
+function addNewElementAsLi(){
+  let employeeName = retrieveEmployeeInformation()
+  document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
+}
+
+function addNewLiOnClick(){
+  let submit = document.querySelector('input[type="submit"]')
+  submit.addEventListener('click', function(event){
+    addNewElementAsLi()
+    resetInput()
+  })
+}
+
+function resetInput(){
+  document.querySelector('input').value = ''
+}
+
+function clearEmployeeListOnLinkClick(){
+  let clear = document.querySelector('a')
+  let ul = document.querySelector('ul')
+  clear.addEventListener('click', function(event){
+    ul.innerHTML = ''
+  })
+}
