@@ -26,6 +26,6 @@ write your code in `index.js`. Write the following functions:
 
 Have fun, and good luck!
 
-## Resources
+# Resources
 
 - [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
