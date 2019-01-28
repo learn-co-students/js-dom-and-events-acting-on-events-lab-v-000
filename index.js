@@ -29,6 +29,9 @@ function addNewLiOnClick(){
   function clearEmployeeListOnLinkClick(){
   
   p = document.querySelector("a")
+  //  make sure to find. the tag of what you looking for in your listener before i
+  //  adding an event  listener on it. 
+  
     p.addEventListener('click',function(){
 
     document.querySelector('.employee-list').innerText = ""
