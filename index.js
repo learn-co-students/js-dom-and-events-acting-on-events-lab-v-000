@@ -13,8 +13,9 @@ function retrieveEmployeeInformation(){
 function addNewElementAsLi(){
   const element = document.createElement('li');
   element.innerText = retrieveEmployeeInformation();
-  // const value = document.createTextNode(retrieveEmployeeInformation());
   return document.querySelector('.employee-list').appendChild(element);
+  // let employeeName = retrieveEmployeeInformation()
+  // document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
 }
 
 function addNewLiOnClick(){
