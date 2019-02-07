@@ -5,3 +5,28 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+function retrieveEmployeeInformation(){
+  return document.querySelector('input').value;
+}
+
+function addNewElementAsLi(){
+  const element = document.createElement('li');
+  element.innerText = retrieveEmployeeInformation();
+  return document.querySelector('.employee-list').appendChild(element);
+  // let employeeName = retrieveEmployeeInformation()
+  // document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
+}
+
+function addNewLiOnClick(){
+  return document.querySelector('input[type="submit"]').addEventListener("click", function() {
+    addNewElementAsLi();
+    document.querySelector('input[type="text"]').value = '';
+  });
+}
+
+function clearEmployeeListOnLinkClick(){
+  return document.querySelector('a').addEventListener("click", function() {
+    document.querySelector('.employee-list').innerHTML = '';
+  });
+}
