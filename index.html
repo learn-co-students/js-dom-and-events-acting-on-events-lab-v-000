@@ -15,8 +15,8 @@
         <h1> Admin Page of Scuber </h1>
         <form class="" action="/employees" method="post" >
           <label for=""> Employee Name</label>
-          <input type="text" name="name" value="" />
-          <input type="submit" name="" value="Add Employee" />
+          <input type="text" name="name" value="" oninput="retrieveEmployeeInformation()" />
+          <input type="submit" name="" value="Add Employee" onsubmit="addNewElementAsLi()" />
         </form>
         <ul class="employee-list">
 
