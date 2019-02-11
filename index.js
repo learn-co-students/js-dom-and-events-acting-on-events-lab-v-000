@@ -5,3 +5,7 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+function retrieveEmployeeInformation(){
+  // Add listener to the main page to listen for keyboard input?
+}
