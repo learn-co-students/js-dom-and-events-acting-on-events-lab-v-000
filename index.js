@@ -3,25 +3,46 @@ function preventRefreshOnSubmit(){
       event.preventDefault()
     })
 }
-
 preventRefreshOnSubmit()
 
-let input = document.querySelector('input')
-
 function retrieveEmployeeInformation(){
-  return input.value
+	let employee = document.querySelector('input').value
+	return employee;
 }
 
 function addNewElementAsLi(){
-  let employeeName = retrieveEmployeeInformation()
-  document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
+	const el = retrieveEmployeeInformation()
+  document.querySelector('.employee-list').innerHTML = `<li> ${el} </li>`
 }
-
 
 function addNewLiOnClick(){
-  let submit = document.querySelector('input[type="submit"]')
-  submit.addEventListener('click', function(event){
-    addNewElementAsLi()
-    resetInput()
-  })
+	document.querySelector('input[type="submit"]').addEventListener('click', function(event){
+		addNewElementAsLi()
+		clearInput()
+	})
 }
+
+function clearInput(){
+	document.querySelector('input').value = ""
+}
+
+function clearEmployeeListOnLinkClick() {
+	document.querySelector('a').addEventListener('click', function(event){
+		document.querySelector('.employee-list').innerHTML = ""
+	})
+}
+
+
+
+
+
+/*
+    retrieveEmployeeInformation(): This retrieves the employee information from the input. It returns a string equal to the value in the input.
+
+    addNewElementAsLi(): This function takes the value retrieved from the previous retrieveEmployeeInformation function and adds that string to a new list element which is appended to the ul with class "employee-list".
+
+    addNewLiOnClick(): This adds the employee name as an li element on click and clears the input value.
+
+    clearEmployeeListOnLinkClick(): This empties out the employee list when "Clear employee list" button clicked.
+
+*/
