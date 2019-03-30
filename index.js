@@ -11,8 +11,8 @@ function retrieveEmployeeInformation(){
 }
 
 function addNewElementAsLi(){
-	const el = retrieveEmployeeInformation()
-  document.querySelector('.employee-list').innerHTML = `<li> ${el} </li>`
+	let el = retrieveEmployeeInformation()
+  document.querySelector('ul').innerHTML += `<li> ${el} </li>`
 }
 
 function addNewLiOnClick(){
@@ -31,10 +31,6 @@ function clearEmployeeListOnLinkClick() {
 		document.querySelector('.employee-list').innerHTML = ""
 	})
 }
-
-
-
-
 
 /*
     retrieveEmployeeInformation(): This retrieves the employee information from the input. It returns a string equal to the value in the input.
