@@ -28,10 +28,10 @@ describe('index', () => {
       });
       document.querySelector('input').value = 'Fred'
 
-      submit.dispatchEvent(event)
+      // submit.dispatchEvent(event)
       expect(document.querySelector('.employee-list').innerHTML).not.to.include('Fred')
       addNewLiOnClick()
-      submit.dispatchEvent(event)
+      // submit.dispatchEvent(event)
       expect(document.querySelector('.employee-list').innerHTML).to.include('Fred')
     })
 
