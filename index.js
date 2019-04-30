@@ -20,13 +20,25 @@ function addNewElementAsLi(){
 }
 
 function addNewLiOnClick() {
-  let ev = document.getElementsByTagName("input")[1]
-  addEventListener("click", addNewElementAsLi());
-  retrieveEmployeeInformation().reset()
+  let submit = document.querySelector('input[type="submit"]')
+  submit.addEventListener("click",  function(event){
+    addNewElementAsLi();
+      document.getElementsByTagName("input")[0].value = ''
+  }) ;
+
 }
 
 function clearEmployeeListOnLinkClick(){
-  let list =
+  let link = document.querySelector('a')
+ let ul = document.querySelector('ul')
+ link.addEventListener('click', function(event){
+   ul.innerHTML = ''
+ })
+}
+
+function resetInput(){
+ document.querySelector('input').value = ''
+
 }
 // addNewElementAsLi(): This function takes the value retrieved from the previous retrieveEmployeeInformation
 // function and adds that string to a new list element which is appended to the ul with class "employee-list".
