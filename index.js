@@ -5,3 +5,10 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+function retrieveEmployeeInformation() {
+  document.querySelector('input')
+//   .addEventListener('submit', function(input){
+//     return 
+//   })
+}
