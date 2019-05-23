@@ -16,16 +16,20 @@ function retrieveEmployeeInformation() {
 }
 
 function addNewElementAsLi() {
-  // const ul = document.getElementsByClassName('employee-list')
+  const ul = document.getElementsByClassName('employee-list')[0]
   const li = document.createElement('li')
   const text = document.createTextNode(retrieveEmployeeInformation())
-  li.innerHtml = retrieveEmployeeInformation();
 
-  document.getElementsByClassName('employee-list').appendChild(li)
+  li.appendChild(text)
+  ul.append(li)
 }
 
 function addNewLiOnClick() {
+  const submit = document.getElementsByTagName("input")[1]
 
+  submit.addEventListener('click', function(event) {
+
+  }
 }
 
 function clearEmployeeListOnLinkClick() {
