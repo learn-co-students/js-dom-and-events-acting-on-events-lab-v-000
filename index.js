@@ -4,14 +4,30 @@ function preventRefreshOnSubmit(){
     })
 }
 
-retrieveEmployeeInformation() {
-	const input = document.querySelector('input');
+preventRefreshOnSubmit()
+	
+const input = document.querySelector('input');
 
-	input.addEventListener('keydown', function(e) {
-		return e.which || e.detail;
-	})
+function retrieveEmployeeInformation() {
+	return input.value
 }
 
+function addNewElementAsLi() {
+	let li = document.createElement("li");
+	let theList = document.querySelector('.employee-list');
+	
+	li.innerText = retrieveEmployeeInformation();
+	theList.appendChild(li);
+}
 
-// This retrieves the employee information from the input. It returns a string 
-// equal to the value in the input.
+function addNewLiOnClick() {
+	input.addEventListener('click', addNewElementAsLi());
+	input.value = '';
+}
+
+function clearEmployeeListOnLinkClick() {
+	let clearEmployeeList = document.querySelector("a")
+	clearEmployeeList.addEventListener('click', function() {
+		document.querySelector('.employee-list').innerHTML = '';
+	})
+}
