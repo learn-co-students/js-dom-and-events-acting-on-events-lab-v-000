@@ -12,8 +12,9 @@ function retrieveEmployeeInformation() {
 };
 
 function addNewElementAsLi() {
-  let employeeToAdd = retrieveEmployeeInformation();
-  document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeToAdd}</li>`);
+  const employeeToAdd = retrieveEmployeeInformation();
+  const list = document.querySelector('.employee-list');
+  list.insertAdjacentHTML('beforeend', `<li>${employeeToAdd}</li>`);
 };
 
 function addNewLiOnClick() {
