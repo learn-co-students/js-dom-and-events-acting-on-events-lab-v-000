@@ -1,21 +1,21 @@
 function preventRefreshOnSubmit(){
     document.querySelector('form').addEventListener('submit', function(event){
-      event.preventDefault()
-    })
+      event.preventDefault();
+    });
 }
 
-preventRefreshOnSubmit()
+preventRefreshOnSubmit();
 	
 const input = document.querySelector('input');
 
 function retrieveEmployeeInformation() {
-	return input.value
+	return input.value;
 }
 
 function addNewElementAsLi() {
 	let li = document.createElement("li");
 	let theList = document.querySelector('.employee-list');
-	
+
 	li.innerText = retrieveEmployeeInformation();
 	theList.appendChild(li);
 }
