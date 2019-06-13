@@ -5,3 +5,23 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+function retrieveEmployeeInformation(){
+  return document.querySelector('input').value
+}
+
+function addNewElementAsLi(){
+  input = retrieveEmployeeInformation()
+  let li = document.createElement('li')
+  li.innerHTML = input.toString()
+  document.querySelector('ul').appendChild(li)
+}
+
+function addNewLiOnClick(){
+  let button = document.querySelector('input[value="Add Employee"]')
+  button.addEventListener("click", addNewElementAsLi());
+  document.querySelector('form').reset()
+}
+
+function clearEmployeeListOnLinkClick(){
+}
