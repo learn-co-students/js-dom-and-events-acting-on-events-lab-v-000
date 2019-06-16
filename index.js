@@ -5,3 +5,10 @@ function preventRefreshOnSubmit(){
 }
 
 preventRefreshOnSubmit()
+
+
+function retrieveEmployeeInformation() {
+  return $(‘input:text’).val()
+}
+
+retrieveEmployeeInformation()
