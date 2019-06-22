@@ -11,8 +11,18 @@ function retrieveEmployeeInformation() {
 }
 
 function addNewElementAsLi() {
-  let ul = document.querySelector('.employee-list');
-  let li = document.createElement('li');
-  li.innerHTML = (li + 1).toString();
-  ul.appendChild(li)
+  //console.log(retrieveEmployeeInformation())
+  document.querySelector('.employee-list').append(retrieveEmployeeInformation())
+}
+
+function addNewLiOnClick() {
+  //Defining a listener for our button, specifically, an onclick handler
+  document.querySelector("Add Employee").onclick = function() {
+    //First things first, we need our text:
+    var text = document.retrieveEmployeeInformation("name").value; //.value gets input values
+    //Now construct a quick list element
+    var li = "<li>" + text + "</li>";
+    //Now use appendChild and add it to the list!
+    document.retrieveEmployeeInformation("employee-list").appendChild(li);
+  }
 }
