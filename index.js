@@ -16,13 +16,18 @@ function addNewElementAsLi() {
 }
 
 function addNewLiOnClick() {
-  //Defining a listener for our button, specifically, an onclick handler
-  document.querySelector("Add Employee").onclick = function() {
-    //First things first, we need our text:
-    var text = document.retrieveEmployeeInformation("name").value; //.value gets input values
-    //Now construct a quick list element
-    var li = "<li>" + text + "</li>";
-    //Now use appendChild and add it to the list!
-    document.retrieveEmployeeInformation("employee-list").appendChild(li);
-  }
+  //Defining a listener for our button, specifically, an click handler
+  document.querySelector("#button").addEventListener("click", function(e) {
+    //adds the employee name as an li element
+    addNewElementAsLi()
+    //clears the input value.
+    document.querySelector("#nameInput").value = ""
+  })
+}
+
+function clearEmployeeListOnLinkClick() {
+//empties out the employee list when "Clear employee list" button clicked.
+  document.querySelector("#clearLink").addEventListener("click", function(e) {
+  document.querySelector(".employee-list").innerHTML = ""
+  })
 }
