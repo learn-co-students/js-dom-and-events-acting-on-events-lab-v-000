@@ -20,7 +20,16 @@ function addNewLiOnClick(){
   let submit = document.querySelector('input[type="submit"]')
  
   submit.addEventListener('click', function(event) {
-  alert('I was clicked!');
-  document.querySelector('input').value.to = ('')
+    let employeeName = retrieveEmployeeInformation()
+    document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
+  document.querySelector('input').value = ''
 });
+}
+
+function clearEmployeeListOnLinkClick(){
+  let link = document.querySelector('a')
+  let ul = document.querySelector('ul')
+  link.addEventListener('click', function(event){
+    ul.innerHTML = ''
+  })
 }
