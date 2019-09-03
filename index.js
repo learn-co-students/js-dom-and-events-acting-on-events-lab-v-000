@@ -33,3 +33,6 @@ function clearEmployeeListOnLinkClick(){
     ul.innerHTML = ''
   })
 }
+
+
+
