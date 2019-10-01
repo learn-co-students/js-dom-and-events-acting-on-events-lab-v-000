@@ -17,9 +17,14 @@ function addNewElementAsLi() {
 }
 
 function addNewLiOnClick() {
-
+  let ul = document.querySelector('ul')
+  ul.addEventListener('click', addNewElementAsLi())
+  document.querySelector('input').value = ""
 }
 
 function clearEmployeeListOnLinkClick() {
-
+  document.querySelector('a').addEventListener('click', function() {
+    let list = document.getElementsByClassName('employee-list')[0]
+    list.innerHTML = ''
+  })
 }
